@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>AIMLAC Coding Challenge 2023-24 - Energy Market Introduction</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="css/theme/sa2c.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2 style="padding-top: 30px;">
+						Useful things to know about the UK and AIMLAC Energy Markets
+					</h2>
+					<h3>
+						Ed Bennett, Julian Lenz, Cory Thomas
+					</h3>
+					<p style="padding-top: 30px">Aberystwyth University</p>
+					<p>Slides: <a href="https://cdt-aimlac.github.io/ccintro-2023">https://cdt-aimlac.github.io/marketintro-2023</a></p>
+					<div style="padding-top: 30px;">
+						<a href="http://cdt-aimlac.org">
+							<img class="plain title-image" src='images/aimlac.svg' alt="CDT AIMLAC logo">
+						</a>
+						<a href="https://www.supercomputing.wales">
+							<img class="plain title-image" src='images/scw-gradient-white-stack.svg' alt="Supercomputing Wales logo">
+						</a>
+						<a href="https://twitter.com/wefowales">
+							<img class="plain title-image" src='images/ERDF.svg' alt="European Regional Development Fund logo">
+						</a>
+					</div>
+				</section>
+
+				<section data-markdown="slides/market.md" data-separator-vertical="^\r?\n-\r?\n$"> </section>
+				<section data-markdown="slides/tooling.md" data-separator-vertical="^\r?\n-\r?\n$"> </section>
+				<section>
+					<h1>Questions?</h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				width: 1366,
+				height: 768,
+				markdown: {
+					animateLists: true,
+				},
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath ]
+			});
+		</script>
+	</body>
+</html>
