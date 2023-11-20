@@ -100,6 +100,7 @@ This is where this balancing is managed from. If you've ever seen the black and 
   - Hourly auction (only single bid per hour, latest one at time of clearing is applied)
   - Bids close 9am **UTC** for market day beginning at 11pm **UTC**
   - Bids are capped at the capacity of the grid connection at the AIMLAC site
+  - Bids are submitted via API (specification separately)
 - Imbalance market
   - Imbalance price from EPEX Spot is always used, no trading here
   - Difference between your day-ahead bid and your actual production/consumption uses this price
