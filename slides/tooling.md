@@ -47,7 +47,9 @@ At some point between 8:30 and 9am UTC each day, the runner will clone a copy of
 
 - The market provides a leaderboard
 - Teams are ranked by the amount of profit/loss
-- Available at [http://sa2c-cirunner.swansea.ac.uk](http://sa2c-cirunner.swansea.ac.uk)
+- Available at [http://sa2c-cirunner.swansea.ac.uk/dashboard/](http://sa2c-cirunner.swansea.ac.uk/dashboard/)
+  - Username: `CDT`
+  - Password: `CCV5`
 
 Script:
 To make things a bit more interesting and let you gauge your progress against the rest of the cohort, we've created a leaderboard to see which team's strategy and deployment perform the best. You can see the total profit/loss for the challenge for each team, and a history of how that has progressed. Your client provided you with a starting budget of £12k. If this drops to zero, you're out.
