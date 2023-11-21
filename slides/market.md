@@ -69,7 +69,7 @@ There are two day-ahead markets, operated by EPEX Spot and NORD Pool. Until Brex
 ![Example of a graph showing demand across a 24-hour period, with price being lowest overnight and highest in the afternoon. Demand is stratified so at low demand only renewables and nuclear contribute, but at high demand combined cycles, coal, and combustion turbines contribute.](./images/hourly-price-example.gif) <!-- .element height="400px" -->
 
 Script:
-So what determines the price? The cost of generating power is based on the cost of fuel and generator efficiency. For example,  a gas generator must buy fuel, covert it to power  via some efficiency factor (modern generators typically being more efficient) and pay for resulting carbon obligations. Some generation has negligible marginal fuel costs, such as  renewables or nuclear. At higher levels of demand, more expensive generation must be used – resulting in higher prices. The Market Price will be set by the marginal generating unit&mdash;the minimum profitability for the most expensive generation method needed to match the anticipated demand.
+So what determines the price? The cost of generating power is based on the cost of fuel and generator efficiency. For example,  a gas generator must buy fuel, convert it to power  via some efficiency factor (modern generators typically being more efficient) and pay for resulting carbon obligations. Some generation has negligible marginal fuel costs, such as  renewables or nuclear. At higher levels of demand, more expensive generation must be used – resulting in higher prices. The Market Price will be set by the marginal generating unit&mdash;the minimum profitability for the most expensive generation method needed to match the anticipated demand.
 
 -
 
@@ -97,11 +97,13 @@ This is where this balancing is managed from. If you've ever seen the black and 
 ## The AIMLAC Energy Market
 
 - Day-ahead market
-  - Hourly auction
+  - Hourly auction (only single bid per hour, latest one at time of clearing is applied)
   - Bids close 9am **UTC** for market day beginning at 11pm **UTC**
   - Bids are capped at the capacity of the grid connection at the AIMLAC site
+  - Bids are submitted via API (specification separately)
 - Imbalance market
   - Imbalance price from EPEX Spot is always used, no trading here
+  - Difference between your day-ahead bid and your actual production/consumption uses this price
 
 Script:
 To make your and our lives easier, we have created a simplified version of this market for the challenge. Rather than the large variety of different systems in reality, we cut things down to two markets: the day-ahead auction, in blocks of one hour, with bids closing at 9am for a market day starting at 11pm. Unlike the real markets, we do not account for daylight saving time here; all times are in UTC. Because this simplification allows for some unchecked arbitrage that in the real world would distort the market to the point it became unprofitable, the fictional grid has imposed the constraint that you can only buy or sell as much as your grid connection would allow&mdash;i.e. you act as a bona fide producer and consumer rather than a speculative trader. Any excess or shortfall is automatically bought or sold at the imbalance price; no bids are made in this market.
